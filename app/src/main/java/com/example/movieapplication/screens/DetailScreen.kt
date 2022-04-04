@@ -9,8 +9,10 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material.icons.filled.MoreVert
 import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -40,13 +42,12 @@ fun DetailScreen(
                 MovieRow(movie = movie)
                 Spacer(modifier = Modifier.height(8.dp))
                 Divider()
+                Text(text = "Movie Images", fontSize = 30.sp, textAlign = TextAlign.Center )
                 ImageGallery(movie = movie)
             }
             
         }
 
-        //Text(text = "${movie.title}",fontSize = 20.sp, style = MaterialTheme.typography.h5)
-        //Text(text = "My DetailScreen! $movieId")
     }
 }
 
